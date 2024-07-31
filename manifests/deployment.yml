@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: willypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: willypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: willypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: willypipelinesjavascriptdocker 
+          image: moviescrmyapp.azurecr.io/willypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
